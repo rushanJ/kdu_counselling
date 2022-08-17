@@ -2,7 +2,7 @@
 
 @section('content')
    
-<div class="row justify-content-center">
+<div class="row justify-content-center"  style="padding: 30px;">
 
 
 
@@ -12,7 +12,7 @@
                 <thead class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">
                     <tr>
                     <td>id</td>
-                    <td>Student</td>
+                    <td>Session Type</td>
                     <td>Counsellor</td>
                     <td>Problem Type</td>
                     <td>Service Method</td>
@@ -29,7 +29,11 @@
                     <tr>
                 
                     <td>{{ $session_request->id }}</td>
-                    <td>{{ $session_request->student_name }}</td>
+                    @if($session_request->is_anonnimus  =='1')
+                        <td>Annonimus</td>
+                    @else
+                        <td>Open</td>
+                    @endif
                     <td>{{ $session_request->counsellor_name }}</td>
                     <td>{{ $session_request->problem_type }}</td>
                     <td>{{ $session_request->service_method }}</td>

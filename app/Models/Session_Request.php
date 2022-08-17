@@ -13,6 +13,7 @@ class Session_Request extends Model
         'student_id',
         'counseller_id',
         'problem_type',
+        'is_anonnimus',
         'service_method',
         'remarks',
     ];

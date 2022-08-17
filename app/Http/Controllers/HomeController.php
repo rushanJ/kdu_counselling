@@ -27,10 +27,11 @@ class HomeController extends Controller
     public function index()
     { 
         $user = Counsellor::where('user_id',Auth::user()->id)->get();;
-        // dd($user[0]->type);
-
+    
+// return view('counseller/dashboard');
         Session::put('role', $user[0]->type);
         if ($user[0]->type=='STUDENT') return redirect('');
-        return view('admin/dashboard');
+       
+        else return view('admin/dashboard');
     }
 }

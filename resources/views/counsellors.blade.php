@@ -25,7 +25,7 @@
         @foreach ($users as $user)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                <div class="team-item position-relative">
-               <img class="img-fluid" src="img/team-1.jpg" alt="" />
+               <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
                <div class="team-text bg-white p-4">
                   <h5>{{$user->f_name}} {{$user->l_name}}</h5>
                   <h6>{{$user->gender}}</h6>

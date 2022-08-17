@@ -58,6 +58,54 @@ class StudentController extends Controller
         // dd( $request["email"]);  //  
 
 
+        
+
+        try {
+            $user= User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+            ]);
+    
+            // $user = User::find($user->id);
+            // $counsellor = new Counsellor;
+    
+    
+    
+            $user = User::find($user->id);
+            // dd($user);
+            $counsellor = new Counsellor;
+    
+            $counsellor->f_name =  $data['f_name'];
+            $counsellor->m_name =  $data['m_name'];
+            $counsellor->l_name = $data['l_name'];
+            $counsellor->address =  $data['address'];
+            $counsellor->dob =  $data['dob']||'';
+            $counsellor->emp_no_student_no =  $data['emp_no_student_no'];
+            $counsellor->faculty =  $data['faculty'];
+            $counsellor->batch = "";
+            $counsellor->gender =  $data['gender'];
+            $counsellor->phone =  $data['phone'];
+            $counsellor->type =  "STUDENT";
+            $counsellor->department = $data['department'];
+            $counsellor->nic =  $data['nic'];
+            $counsellor->image =  '';
+            $user->user_info()->save($counsellor);
+            // dd($user->user_info);
+          } catch (\Exception $e) {
+              return $e->getMessage();
+          }
+
+        //   dd( $path);  //  
+          return redirect('student');
+
+
+
+
+
+
+
+
         try {
             $user= User::create([
                 'name' => $data['name'],
@@ -78,6 +126,7 @@ class StudentController extends Controller
             $student->m_name =  $data['m_name'];
             $student->l_name = $data['l_name'];
             $student->address =  $data['address'];
+            $counsellor->dob =  $data['dob']||'';
             $student->emp_no_student_no =  $data['emp_no_student_no'];
             $student->faculty =  $data['faculty'];
             $student->batch = $data['batch'];
@@ -89,9 +138,10 @@ class StudentController extends Controller
             $user->user_info()->save($student);
             // dd($user->user_info);
           } catch (\Exception $e) {
-            //   return $e->getMessage();
+              return $e->getMessage();
           }
 
+          dd("dfsdfsd");
           return redirect('user');
 
         

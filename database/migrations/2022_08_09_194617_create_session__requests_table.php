@@ -18,6 +18,7 @@ class CreateSessionRequestsTable extends Migration
             $table->integer('student_id')->unsigned();
             $table->integer('counseller_id')->unsigned();
             $table->string('problem_type');
+            $table->string('is_anonnimus');
             $table->string('service_method');
             $table->text('remarks');
             $table->timestamps();

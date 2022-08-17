@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+// Route::get('logout', Auth::logout())->name('auth.logout');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -69,6 +70,24 @@ Route::post('/servicesFromCounsellor/create', [App\Http\Controllers\ServiceFromC
 
 Route::get('/mysessions', [App\Http\Controllers\SessionRequestController::class, 'index'])->name('question');
 Route::get('/mysessions/{id}', [App\Http\Controllers\SessionRequestController::class, 'show'])->name('user');
+
+Route::get('storage/images/{filename}', function ($filename)
+{
+    // dd("asdfasdas");
+    $path = storage_path('app\public\images/' . $filename);
+            // dd($path );
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
 
 
 // Route::get('/user/{id}', 'CounsellorController@view');

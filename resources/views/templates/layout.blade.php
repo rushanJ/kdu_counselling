@@ -40,6 +40,131 @@
     <link href="http://localhost:8000/css/custom.css" rel="stylesheet" />
   </head>
 
+  <style>
+
+
+      #regForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+        
+        
+      }
+
+
+      input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+       
+      }
+      .answerarea {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 3px solid #fc7b03;
+      }
+
+
+      /* Mark input boxes that gets an error on validation: */
+      input.invalid {
+        background-color: #ffdddd;
+      }
+
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+      }
+
+      button {
+        background-color: #04AA6D;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      #prevBtn {
+        background-color: #bbbbbb;
+      }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbbbbb;
+      border: none;  
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 0.5;
+    }
+
+    .step.active {
+      opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+    .step.finish {
+      background-color: #04AA6D;
+    }
+  
+input[type="radio"]{
+  display: none;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2,
+#option-3:checked:checked ~ .option-3,
+#option-4:checked:checked ~ .option-4{
+  padding: 5px;
+  
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot,
+#option-3:checked:checked ~ .option-3 .dot,
+#option-4:checked:checked ~ .option-4 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before,
+#option-3:checked:checked ~ .option-3 .dot::before,
+#option-4:checked:checked ~ .option-4 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span,
+#option-3:checked:checked ~ .option-3 span,
+#option-4:checked:checked ~ .option-4 span{
+  color: #fff;
+}
+
+
+
+.img-optioin{
+  width: 500px;
+  height: 300px;
+}
+</style>
+
   <body>
     <!-- Spinner Start -->
     <div
@@ -76,10 +201,15 @@
           <a href="counsellors" class="nav-item nav-link">Counsellors</a>
           <a href="mysessions" class="nav-item nav-link">My Sessions</a>
           @endif
-          <a href="about.html" class="nav-item nav-link">About Us</a>
+          <a href="about.html" class="nav-item nav-link">About Us {{Auth::check()}}</a>
           <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-          <a class="nav-link"  class="nav-item nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-
+          
+          @if (Auth::check())<form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <input type="submit" value="Logout"  style="null"class="nav-item nav-link">
+              </form>
+          @else <a class="nav-link"  class="nav-item nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+          @endif
         </div>
       </div>
     </nav>

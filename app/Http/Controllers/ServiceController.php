@@ -43,11 +43,12 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-
+    
         try {
             if ($request['relationship']=='ANNONIMOUS')
             $session_request= Session_Request::create([
-                'student_id' => 0,
+                'student_id' =>Auth::user()->id,
+                'is_anonnimus' => 1,
                 'counseller_id' => 0,
                 'problem_type' => '',
                 'service_method' => $request['service_method'],
@@ -58,6 +59,7 @@ class ServiceController extends Controller
                 'student_id' =>  Auth::user()->id,
                 'counseller_id' => 0,
                 'problem_type' => '',
+                'is_anonnimus' => 0,
                 'service_method' => $request['service_method'],
                 'remarks' => $request['remarks'],
                             ]);
@@ -76,10 +78,10 @@ class ServiceController extends Controller
              }
              $question->save();
           } catch (\Exception $e) {
-            //   return $e->getMessage();
+              return $e->getMessage();
           }
 
-          return redirect('questions');
+          return redirect('mysessions');
     }
 
     /**

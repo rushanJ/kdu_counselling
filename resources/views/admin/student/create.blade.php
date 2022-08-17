@@ -19,7 +19,7 @@
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
       </div></hr><br>
 
- 
+      <input id="type" type="hidden" class="form-control @error('nic') is-invalid @enderror" name="type" value="STUDENT" required  >
          
           
         </div><!--/col-3-->

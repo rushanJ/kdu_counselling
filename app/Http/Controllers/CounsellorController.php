@@ -59,20 +59,22 @@ class CounsellorController extends Controller
 
     public function create(CreateUserRequest $data)
     {
-        // dd( $request["email"]);  //  
-
-
+       
+        $path = $data->image->store('images','public');      
+       
+            $name=$data['f_name']." ".$data['m_name']." ".$data['l_name'];
+            
         try {
             $user= User::create([
-                'name' => $data['name'],
+                'name' =>  $name,
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
             ]);
     
             // $user = User::find($user->id);
             // $counsellor = new Counsellor;
-    
-    
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
             $user = User::find($user->id);
             // dd($user);
@@ -82,6 +84,7 @@ class CounsellorController extends Controller
             $counsellor->m_name =  $data['m_name'];
             $counsellor->l_name = $data['l_name'];
             $counsellor->address =  $data['address'];
+            $counsellor->dob =  $data['dob']||'';
             $counsellor->emp_no_student_no =  $data['emp_no_student_no'];
             $counsellor->faculty =  $data['faculty'];
             $counsellor->batch = "";
@@ -90,12 +93,14 @@ class CounsellorController extends Controller
             $counsellor->type =  "COUNSELLER";
             $counsellor->department = $data['department'];
             $counsellor->nic =  $data['nic'];
+            $counsellor->image =  $path;
             $user->user_info()->save($counsellor);
             // dd($user->user_info);
           } catch (\Exception $e) {
-            //   return $e->getMessage();
+              return $e->getMessage();
           }
 
+        //   dd( $path);  //  
           return redirect('user');
 
         

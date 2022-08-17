@@ -13,10 +13,12 @@
     <div class="row">
   		<div class="col-sm-3"><!--left col-->
               
- <form class="form" action="./create" method="POST" id="registrationForm">
+ <form enctype ="multipart/form-data" class="form" action="./create" method="POST" id="registrationForm" >
                   @csrf
       <div class="text-center">
         <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" required autofocus>
+
       </div></hr><br>
 
  
@@ -27,7 +29,8 @@
           <div class="tab-content">
             <div class="tab-pane active" id="home">
                 <hr>
-                 
+                <input id="type" type="hidden" class="form-control @error('nic') is-invalid @enderror" name="type" value="COUNSELLER" required  >
+
                     <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
@@ -143,6 +146,8 @@
                                 </div>
                             </div>
                       </div>
+
+                      
 
                       <div class="form-group">
                             <div class="row">

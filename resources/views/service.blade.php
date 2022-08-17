@@ -3,111 +3,171 @@
 @section('content')
    
 <div class="row justify-content-center">
-            <!-- <div class="col-11 col-sm-9 col-md-7 
-                col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
-                <div class="px-0 pt-4 pb-0 mt-3 mb-3">
-                    <form id="form">
-                        <ul id="progressbar">
-                            <li class="active" id="step1">
-                                <strong>Step 1</strong>
-                            </li>
-                            <li id="step2"><strong>Step 2</strong></li>
-                            <li id="step3"><strong>Step 3</strong></li>
-                            <li id="step4"><strong>Step 4</strong></li>
-                        </ul>
-                        <div class="progress">
-                            <div class="progress-bar"></div>
-                        </div> <br>
-                        <fieldset>
-                            <h2>Welcome To GFG Step 1</h2>
-                            <input type="button" name="next-step" 
-                                class="next-step" value="Next Step" />
-                        </fieldset>
-                        <fieldset>
-                            <h2>Welcome To GFG Step 2</h2>
-                            <input type="button" name="next-step" 
-                                class="next-step" value="Next Step" />
-                            <input type="button" name="previous-step" 
-                                class="previous-step" 
-                                value="Previous Step" />
-                        </fieldset>
-                        <fieldset>
-                            <h2>Welcome To GFG Step 3</h2>
-                            <input type="button" name="next-step" 
-                                class="next-step" value="Final Step" />
-                            <input type="button" name="previous-step" 
-                                class="previous-step" 
-                                value="Previous Step" />
-                        </fieldset>
-                        <fieldset>
-                            <div class="finish">
-                                <h2 class="text text-center">
-                                    <strong>FINISHED</strong>
-                                </h2>
-                            </div>
-                            <input type="button" name="previous-step" 
-                                class="previous-step" 
-                                value="Previous Step" />
-                        </fieldset>
-                    </form>
-                </div>
-            </div> -->
-            <form method="post" action="services/create">
-            @csrf
+ 
+<form id="regForm" method="post" action="services/create">
+@csrf
 
-            <fieldset>
-               
 
-                <div>
-                <input type="radio" id="annonimous" name="relationship" value="ANNONIMOUS" />
-                      
-                <label for="huey">Annonimous</label>
-                </div>
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    
+    <div class="row">
+        <input type="radio" name="relationship" value="ANNONIMOUS" id="option-1" checked>
+        <input type="radio"  name="relationship" value="OPEN" id="option-2">
+        <label for="option-1" class="option option-1 col-sm-6">
+            
+        <img src="https://png.pngtree.com/png-clipart/20220613/original/pngtree-unknown-user-question-mark-about-png-image_7997211.png" alt="" class="img-optioin">
 
-                <div>
-                <input type="radio" id="open" name="relationship" value="OPEN">
-                <label for="dewey">Open</label>
-                </div>
+            <span style="padding-left:25vh">ANNONIMOUS</span>
+            </label>
+        <label for="option-2" class="option option-2 col-sm-6">
+        <img src="https://thumbs.dreamstime.com/b/conversation-two-person-conversation-two-person-concept-meeting-woman-man-chat-online-real-communication-160609745.jpg" class="img-optioin" alt="">
 
-               
-            </fieldset>
+            <span style="padding-left:30vh">OPEN</span>
+        </label>
+        
+    </div>
 
-            @foreach ($questions as $question)
-                <tr>
+  </div>
+
+
+  
+  @foreach ($questions as $question)
+            <div class="tab">
+                <h3>{{ $question->question }} </h3>
+                <input type="hidden" name="question[]" value="{{$question->id}}">
+                Answer :
+                <textarea id="answer" rows="6" type="text" class="answerarea form-control @error('question') is-invalid @enderror" name="answer[]" value="{{ old('answer') }}" required  placeholder="Enter Details..."> </textarea>
+
+            </div>
+
+  @endforeach
+
+
+
+ 
+  <div class="tab">
+    <div class="row">
+            <input type="radio" name="service_method" value="ONLINE" id="option-3" checked>
+            <input type="radio" name="service_method" value="PHYSICAL" id="option-4">
+            <label for="option-3" class="option option-3 col-sm-6">
                 
-                <td>{{ $question->question }}</td>
-              
-                <input type="text" name="question[]" value="{{$question->id}}">
-                <textarea id="answer" type="text" class="form-control @error('question') is-invalid @enderror" name="answer[]" value="{{ old('answer') }}" required autocomplete="answer" autofocus></textarea>
+            <img src="https://cdn.dribbble.com/users/3956332/screenshots/15304150/media/243feef68fd2e557dedf43fe92dcb529.jpg?compress=1&resize=400x300&vertical=top" alt="" class="img-optioin">
+
+                <span style="padding-left:27vh">Online</span>
+                </label>
+            <label for="option-4" class="option option-4 col-sm-6">
+            <img src="https://media.istockphoto.com/vectors/job-interview-vector-id1298405320?k=20&m=1298405320&s=612x612&w=0&h=PfKZV6qyGioiVHNzHWcJaDJFWN9KAM0SN2RXJrNs5ws=" class="img-optioin" alt="">
+
+                <span style="padding-left:37vh">PHYSICAL</span>
+            </label>
+            
+        </div>
+  </div>
+  <div class="tab">
+    <h3>Remarks</h3>
+  
+  <textarea id="remarks" type="text" class="answerarea form-control @error('question') is-invalid @enderror" name="remarks" value="{{ old('remarks') }}" required autocomplete="remarks" autofocus></textarea>
+
+  </div>
+  <div class="tab">
+  <input type="submit" value="update">
+  </div>
+  <div style="overflow:auto;">
+    <div style="float:right;">
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    @foreach ($questions as $question)
+        <span class="step"></span>
+    @endforeach
+  </div>
+</form>
+
+<script>
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  //... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  //... and run a function that will display the correct step indicator:
+  fixStepIndicator(n)
+}
+
+function nextPrev(n) {
+  // This function will figure out which tab to display
+  var x = document.getElementsByClassName("tab");
+  // Exit the function if any field in the current tab is invalid:
+  if (n == 1 && !validateForm()) return false;
+  // Hide the current tab:
+  x[currentTab].style.display = "none";
+  // Increase or decrease the current tab by 1:
+  currentTab = currentTab + n;
+  // if you have reached the end of the form...
+  if (currentTab >= x.length) {
+    // ... the form gets submitted:
+    document.getElementById("regForm").submit();
+    return false;
+  }
+  // Otherwise, display the correct tab:
+  showTab(currentTab);
+}
+
+function validateForm() {
+  // This function deals with validation of the form fields
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+  for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+    if (y[i].value == "") {
+      // add an "invalid" class to the field:
+      y[i].className += " invalid";
+      // and set the current valid status to false
+      valid = false;
+    }
+  }
+  // If the valid status is true, mark the step as finished and valid:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // return the valid status
+}
+
+function fixStepIndicator(n) {
+  // This function removes the "active" class of all steps...
+  var i, x = document.getElementsByClassName("step");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" active", "");
+  }
+  //... and adds the "active" class on the current step:
+  x[n].className += " active";
+}
+</script>
 
 
-                </tr>
-                @endforeach
 
-                <!-- <input type="text" name="service_method" > -->
-
-                <fieldset>
-                <legend>Select a maintenance drone:</legend>
-
-                <div>
-                <input type="radio" id="online" name="service_method" value="ONLINE" />
-                      
-                <label for="huey">Online</label>
-                </div>
-
-                <div>
-                <input type="radio" id="physical" name="service_method" value="PHYSICAL">
-                <label for="dewey">Physical</label>
-                </div>
-
-               
-            </fieldset>
-                <textarea id="remarks" type="text" class="form-control @error('question') is-invalid @enderror" name="remarks" value="{{ old('remarks') }}" required autocomplete="remarks" autofocus></textarea>
-
-
-                    <input type="submit" value="update">
-
-                </form>
+           
                 <!-- <form method="post" action="services/create">
                     @csrf
 
