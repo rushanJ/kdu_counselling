@@ -48,7 +48,7 @@
                 <td>   
                      <a href='user/edit/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons">edit</span></a>
                      <a href='user/view/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons">visibility</span></a>
-                     <a href='user/delete/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons"> delete </span></a>
+                     <a href='./{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons"> delete </span></a>
                 </td>
 
 
