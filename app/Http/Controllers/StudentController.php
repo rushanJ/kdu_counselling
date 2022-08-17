@@ -58,11 +58,11 @@ class StudentController extends Controller
         // dd( $request["email"]);  //  
 
 
-        
+        $name=$data['f_name']." ".$data['m_name']." ".$data['l_name'];
 
         try {
             $user= User::create([
-                'name' => $data['name'],
+                'name' => $name,
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
             ]);
