@@ -74,7 +74,6 @@ class CounsellorController extends Controller
             // $user = User::find($user->id);
             // $counsellor = new Counsellor;
 
-    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
             $user = User::find($user->id);
             // dd($user);
