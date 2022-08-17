@@ -49,7 +49,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link  active" href="http://localhost:8000/home">
+          <a class="nav-link active" href="http://localhost:8000/home">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -70,7 +70,7 @@
         </li>
         @if(session()->get('role') =='ADMIN')
         <li class="nav-item">
-          <a class="nav-link " href="/user">
+          <a class="nav-link " href="http://localhost:8000/user">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -91,7 +91,7 @@
         </li>
         @endif
         <li class="nav-item">
-          <a class="nav-link " href="/student">
+          <a class="nav-link " href="http://localhost:8000/student">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -111,7 +111,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="questions">
+          <a class="nav-link  " href="http://localhost:8000/questions">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>credit-card</title>
@@ -131,7 +131,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="sessions">
+          <a class="nav-link  " href="http://localhost:8000/sessions">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>

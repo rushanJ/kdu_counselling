@@ -71,7 +71,7 @@ class SessionRequestController extends Controller
     {
         //
         $student_request = \DB::select("SELECT `student__requests`.`id`, `questions`.`question`, `student__requests`. `answer`FROM `student__requests`,`questions` WHERE `student__requests`.`question_id`=`questions`.`id` AND `student__requests`.`request_id`=$id ;");
-        $session_request = \DB::select("SELECT `session__requests`.`id`,CONCAT(`counsellors`.`f_name`,' ',`counsellors`.`l_name`) AS `student_name`,`users`.`name`AS `counsellor_name`,`session__requests`.`problem_type`, `session__requests`.`counseller_id`,`session__requests`. `service_method`, `session__requests`.`remarks` FROM `session__requests`,`users`,`counsellors` WHERE `session__requests`.`student_id`=`counsellors`.`user_id` AND `session__requests`.`counseller_id`=`users`.`id` AND `session__requests`.`id`=$id ;");
+        $session_request = \DB::select("SELECT `session__requests`.`id`,`session__requests`.`date`,`session__requests`.`time`, CONCAT(`counsellors`.`f_name`,' ',`counsellors`.`l_name`) AS `student_name`,`users`.`name`AS `counsellor_name`,`session__requests`.`problem_type`, `session__requests`.`counseller_id`,`session__requests`. `service_method`, `session__requests`.`remarks` FROM `session__requests`,`users`,`counsellors` WHERE `session__requests`.`student_id`=`counsellors`.`user_id` AND `session__requests`.`counseller_id`=`users`.`id` AND `session__requests`.`id`=$id ;");
         $users = Counsellor::where(['type' => "COUNSELLER"])
         ->get();  
        
@@ -104,17 +104,28 @@ class SessionRequestController extends Controller
     public function update($id,Request $request, Session_Request $session_Request)
     {
         //
-  
-        
+        $userId=Auth::user()->id;
+        // dd($userId );
+        $user = Counsellor::where('user_id',Auth::user()->id)->get();;
+        if ( $user[0]->type=="COUNSELLER"){
         $session_request = Session_Request::find($id);
         // dd($session_request);
         $session_request->counseller_id =$request['counsellor'];
         $session_request->problem_type =$request['problem_type'];
                         //
         $session_request->save(); 
-        return redirect()->back();
 
- 
+        }
+        else{
+            $session_request = Session_Request::find($id);
+            // dd($session_request);
+            $session_request->date =$request['date'];
+            $session_request->time =$request['time'];
+                      //
+            $session_request->save(); 
+    
+        }
+        return redirect()->back(); 
     }
 
     /**

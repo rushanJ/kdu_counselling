@@ -16,6 +16,8 @@ class Session_Request extends Model
         'is_anonnimus',
         'service_method',
         'remarks',
+        'date',
+        'time',
     ];
 }
 

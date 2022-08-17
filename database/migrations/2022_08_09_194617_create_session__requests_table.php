@@ -21,6 +21,8 @@ class CreateSessionRequestsTable extends Migration
             $table->string('is_anonnimus');
             $table->string('service_method');
             $table->text('remarks');
+            $table->date('date');
+            $table->time('time');
             $table->timestamps();
         });
     }
