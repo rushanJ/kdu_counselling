@@ -164,7 +164,7 @@ class CounsellorController extends Controller
         ->get();  
        
         // dd($user);
-        return redirect('user');
+        // return redirect('user');
         return view('admin/counsellor/all',compact('users'));
     }
     
