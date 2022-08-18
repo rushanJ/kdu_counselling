@@ -55,8 +55,7 @@ class StudentController extends Controller
 
     public function create(CreateUserRequest $data)
     {
-        // dd( $request["email"]);  //  
-
+      
 
         $name=$data['f_name']." ".$data['m_name']." ".$data['l_name'];
 
@@ -79,8 +78,8 @@ class StudentController extends Controller
             $counsellor->f_name =  $data['f_name'];
             $counsellor->m_name =  $data['m_name'];
             $counsellor->l_name = $data['l_name'];
-            $counsellor->address =  $data['address'];
-            $counsellor->dob =  $data['dob']||'';
+            $counsellor->address =  $data['address'] ;
+            $counsellor->dob =  $data['dob'];
             $counsellor->emp_no_student_no =  $data['emp_no_student_no'];
             $counsellor->faculty =  $data['faculty'];
             $counsellor->batch = "";
@@ -95,6 +94,8 @@ class StudentController extends Controller
           } catch (\Exception $e) {
               return $e->getMessage();
           }
+
+        
 
         //   dd( $path);  //  
           return redirect('student');
@@ -141,7 +142,7 @@ class StudentController extends Controller
               return $e->getMessage();
           }
 
-          dd("dfsdfsd");
+      
           return redirect('user');
 
         
@@ -190,7 +191,7 @@ class StudentController extends Controller
               return $e->getMessage();
           }
 
-        //   return redirect('user/edit/'.$id);
+          return redirect('student/edit/'.$id);
         // return view('admin/student/edit',compact('user'));
 
         

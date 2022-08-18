@@ -31,7 +31,7 @@
                 <hr>
                 <input id="type" type="hidden" class="form-control @error('nic') is-invalid @enderror" name="type" value="COUNSELLER" required  >
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <label for="first_name"><h4>NIC </h4></label>
@@ -46,7 +46,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Middle name </h4></label>
@@ -95,7 +95,7 @@
                                     @enderror                              
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -133,12 +133,12 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Faculty </h4></label>
+                                    <label for="first_name"><h4>Job Title </h4></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input id="faculty" type="text" class="form-control @error('faculty') is-invalid @enderror" name="faculty" value="{{ old('faculty') }}" required autocomplete="faculty" autofocus>
+                                    <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ old('nic') }}" required autocomplete="nic" autofocus>
 
-                                    @error('faculty')
+                                    @error('facniculty')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -149,26 +149,6 @@
 
                       
 
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Department </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="department" type="text" class="form-control @error('department') is-invalid @enderror" name="department" value="{{ old('department') }}" required autocomplete="department" autofocus>
-
-                                    @error('department')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror          
-                                </div>
-                            </div>
-                      </div>
-
-
-                           
-
 
                       <div class="form-group">
                             <div class="row">
@@ -176,8 +156,18 @@
                                     <label for="first_name"><h4>Gender </h4></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
+                                    <!-- <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus> -->
 
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="gender">Male 
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="gender">female 
+                                        </label>
+                                    </div>
                                     @error('gender')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

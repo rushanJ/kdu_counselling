@@ -38,17 +38,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Middle name </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <label for="first_name"><h5> {{ $user->user_info->m_name }}</h5></label>
-                                    <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
-                                </div>
-                            </div>
-                      </div>
+                     
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -76,26 +66,16 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Faculty </h4></label>
+                                    <label for="first_name"><h4>Job Title </h4></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="first_name"><h5> {{ $user->user_info->faculty }}</h5></label>
+                                    <label for="first_name"><h5> {{ $user->user_info->nic }}</h5></label>
                                     <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
                                 </div>
                             </div>
                       </div>
 
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Department </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <label for="first_name"><h5> {{ $user->user_info->department }}</h5></label>
-                                    <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
-                                </div>
-                            </div>
-                      </div>
+                      
 
                      
 

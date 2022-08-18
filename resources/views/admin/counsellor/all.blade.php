@@ -13,15 +13,12 @@
             <thead class="text-uppercase text-secondary text-xs font-weight-bolder opacity-10">
                 <tr>
                 <td>Employee No</td>
-                <td>NIC</td>
+               
                 <td> First Name</td>
-                <td>Middle Name</td>
                 <td>Last Name</td>
                 <td>Address</td>
 
-                <td>Faculty</td>
-                <td>Department</td>
-                <td>Batch</td>
+                <td>Job Title</td>
                 <td>Gender</td>
                 <td>Phone</td>
                 <td></td>
@@ -33,15 +30,14 @@
                 <tr>
                 <!-- <td>{{ $user->id }}</td> -->
                 <td>{{ $user->emp_no_student_no }}</td>
-                <td>{{ $user->nic }}</td>
                 <td>{{ $user->f_name }}</td>
-                <td>{{ $user->m_name }}</td>
+              
                 <td>{{ $user->l_name }}</td>
                 <td>{{ $user->address }}</td>
 
-                <td>{{ $user->faculty }}</td>
-                <td>{{ $user->department }}</td>
-                <td>{{ $user->batch }}</td>
+                <td>{{ $user->nic }}</td>
+                
+              
 
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->phone }}</td>

@@ -125,18 +125,18 @@ class CounsellorController extends Controller
             // dd($user);
             $counsellor = $user->user_info();
     
-            $counsellor->f_name =  $data['f_name'];
-            $counsellor->m_name =  $data['m_name'];
-            $counsellor->l_name = $data['l_name'];
+            $counsellor->f_name =  $data['f_name'] ;
+            $counsellor->m_name =  $data['m_name'] ;
+            $counsellor->l_name = $data['l_name'] ;
             $counsellor->address =  $data['address'];
-            $counsellor->emp_no_student_no =  $data['emp_no_student_no'];
+            $counsellor->emp_no_student_no =  $data['emp_no_student_no'] ;
             $counsellor->faculty =  $data['faculty'];
             $counsellor->batch = "";
-            $counsellor->gender =  $data['gender'];
-            $counsellor->phone =  $data['phone'];
+            $counsellor->gender =  $data['gender'] ;
+            $counsellor->phone =  $data['phone'] ;
             $counsellor->type =  "COUNSELLER";
-            $counsellor->department = $data['department'];
-            $counsellor->nic =  $data['nic'];
+            $counsellor->department = $data['department']  ;
+            $counsellor->nic =  $data['nic']  ;
 
             $counsellor->save($counsellor);
             // $counsellor->save();    
@@ -148,7 +148,7 @@ class CounsellorController extends Controller
               return $e->getMessage();
           }
 
-        //   return redirect('user/edit/'.$id);
+          return redirect('user/edit/'.$id);
         // return view('admin/counsellor/edit',compact('user'));
 
         

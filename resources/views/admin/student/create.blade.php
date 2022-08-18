@@ -31,7 +31,7 @@
                     <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <label for="first_name"><h4>NIC </h4></label>
+                                        <label for="first_name"><h4>Rank </h4></label>
                                     </div>
                                     <div class="col-md-9">
                                         <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ old('nic') }}" required autocomplete="nic" autofocus>
@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Employee No </h4></label>
+                                    <label for="first_name"><h4>Student  No </h4></label>
                                 </div>
                                 <div class="col-md-9">
                                     <input id="emp_no_student_no" type="text" class="form-control @error('emp_no_student_no') is-invalid @enderror" name="emp_no_student_no" value="{{ old('emp_no_student_no') }}" required autocomplete="emp_no_student_no" autofocus>
@@ -77,22 +77,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Middle name </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="m_name" type="text" class="form-control @error('m_name') is-invalid @enderror" name="m_name" value="{{ old('m_name') }}" required autocomplete="m_name" autofocus>
-
-                                    @error('m_name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror                              
-                                </div>
-                            </div>
-                      </div>
+                      
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -110,22 +95,7 @@
                             </div>
                       </div>
                       
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Address </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
-
-                                    @error('address')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                      </div>
+                 
 
                       <div class="form-group">
                             <div class="row">
@@ -167,7 +137,7 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Batch </h4></label>
+                                    <label for="first_name"><h4>Intake </h4></label>
                                 </div>
                                 <div class="col-md-9">
                                     <input id="batch" type="text" class="form-control @error('batch') is-invalid @enderror" name="batch" value="{{ old('batch') }}" required autocomplete="batch" autofocus>

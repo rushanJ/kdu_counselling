@@ -19,14 +19,7 @@
       </div></hr><br>
 
     
-          
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
-          </ul> 
+         
                
          
           
@@ -36,6 +29,18 @@
             <div class="tab-pane active" id="home">
                 <hr>
                   <form class="form" action="##" method="post" id="registrationForm">
+
+                    <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="first_name"><h4>Rank</h4></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <label for="first_name"><h5> {{ $user->user_info->nic }}</h5></label>
+                                    <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
+                                </div>
+                            </div>
+                      </div>
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -47,17 +52,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Middle name </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <label for="first_name"><h5> {{ $user->user_info->m_name }}</h5></label>
-                                    <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
-                                </div>
-                            </div>
-                      </div>
+                     
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -69,18 +64,7 @@
                                 </div>
                             </div>
                       </div>
-                      
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Address </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <label for="first_name"><h5> {{ $user->user_info->address }}</h5></label>
-                                    <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
-                                </div>
-                            </div>
-                      </div>
+                
 
                       <div class="form-group">
                             <div class="row">
@@ -109,7 +93,7 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Batch </h4></label>
+                                    <label for="first_name"><h4>Intake </h4></label>
                                 </div>
                                 <div class="col-md-9">
                                     <label for="first_name"><h5> {{ $user->user_info->batch }}</h5></label>
