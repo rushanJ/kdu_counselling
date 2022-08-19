@@ -113,10 +113,10 @@ class QuestionController extends Controller
      * @param  \App\Models\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Question $question)
+    public function destroy($id,Question $question)
     {
         //
-        $user = User::find($id)->delete();
+        $user = Question::find($id)->delete();
         return redirect('questions');
     }
 }

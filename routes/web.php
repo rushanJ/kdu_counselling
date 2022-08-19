@@ -50,6 +50,8 @@ Route::get('/questions', [App\Http\Controllers\QuestionController::class, 'index
 Route::get('/questions/create', [App\Http\Controllers\QuestionController::class, 'create'])->name('new');
 Route::get('/questions/view/{id}', [App\Http\Controllers\QuestionController::class, 'view'])->name('user');
 Route::get('/questions/edit/{id}', [App\Http\Controllers\QuestionController::class, 'edit'])->name('edit');
+Route::get('/questions/delete/{id}', [App\Http\Controllers\QuestionController::class, 'destroy'])->name('destroy');
+
 
 Route::post('/questions/create', [App\Http\Controllers\QuestionController::class, 'store'])->name('create');
 Route::post('/questions/edit/{id}', [App\Http\Controllers\QuestionController::class, 'update'])->name('create');
