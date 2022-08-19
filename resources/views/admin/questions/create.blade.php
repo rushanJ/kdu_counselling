@@ -30,7 +30,8 @@
                     <label for="first_name"><h4>Question </h4></label>
                 </div>
                 <div class="col-md-12">
-               
+                <textarea id="txtid" name="question" rows="4" cols="100"></textarea>
+                            
                     @error('question')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

@@ -220,7 +220,7 @@ input[type="radio"]{
   
     
     <!-- Footer Start -->
-    <div
+    <!-- <div
       class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn"
       data-wow-delay="0.1s"
     >
@@ -290,16 +290,11 @@ input[type="radio"]{
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
               &copy; <a href="#">Your Site Name</a>, All Right Reserved.
             </div>
-            <div class="col-md-6 text-center text-md-end">
-              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-              <br />Distributed By:
-              <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-            </div>
+            
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Footer End -->
 
     <!-- Back to Top -->
