@@ -81,10 +81,10 @@
                             <div class="col-md-9">
                                         <select class="form-control @error('counsellor') is-invalid @enderror" name="problem_type" id="problem_type">
                                       
-                                            <option   value="Type1">Type1</option>  
-                                            <option   value="Type2">Type2</option>  
-                                            <option   value="Type3">Type3</option>  
-                                            <option   value="Type4">Type4</option>                                                            
+                                            <option   value="Education">Education</option>  
+                                            <option   value="Relationship">Relationship</option>  
+                                            <option   value="Anexiety">Anexiety</option>  
+                                            <option   value="Depresion">Depresion</option>                                                            
                                      
                                            
                                         </select>                         
