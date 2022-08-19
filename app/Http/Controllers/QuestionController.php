@@ -116,5 +116,7 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         //
+        $user = User::find($id)->delete();
+        return redirect('questions');
     }
 }
