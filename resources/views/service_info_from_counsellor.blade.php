@@ -120,7 +120,7 @@
                       </div>
                      @endif
               <hr>
-              <a href="http://localhost:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
+              <a href="http://192.168.8.104:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
                      <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
 
              </div>

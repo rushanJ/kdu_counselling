@@ -8,16 +8,14 @@
     
     <div class="container bootstrap snippet">
     <div class="row">
-  		<div class="col-sm-10"><h1>Edit Student</h1></div>
+  		<div class="col-sm-10"><h1>Edit Question</h1></div>
     </div>
     <div class="row">
   		<div class="col-sm-3"><!--left col-->
               
  <form class="form" action="" method="POST" id="registrationForm">
                   @csrf
-      <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-      </div></hr><br>
+                     </hr><br>
 
     
       </div><!--/col-3-->

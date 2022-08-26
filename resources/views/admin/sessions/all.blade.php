@@ -29,7 +29,12 @@
                     <tr>
                 
                     <td>{{ $session_request->id }}</td>
-                    <td>{{ $session_request->student_name }}</td>
+                    <td>@if(! $session_request->is_anonnimus )         
+                            {{ $session_request->student_name }}    
+                    @else
+                        Anonnimus Student
+                    @endif
+</td>
                     <td>{{ $session_request->counsellor_name }}</td>
                     <td>{{ $session_request->problem_type }}</td>
                     <td>{{ $session_request->service_method }}</td>

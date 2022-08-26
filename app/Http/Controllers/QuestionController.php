@@ -100,7 +100,7 @@ class QuestionController extends Controller
         //
         $question = Question::find($id);
        
-        $question->question=$request['question  '];
+        $question->question=$request['question'];
         // dd($que->question);
         $question->save(); 
         return view('admin/questions/edit',compact('question'));
