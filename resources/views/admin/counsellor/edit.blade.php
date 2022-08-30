@@ -32,7 +32,7 @@
                     <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <label for="first_name"><h4>NIC </h4></label>
+                                        <label for="first_name"><h4>Title </h4></label>
                                     </div>
                                     <div class="col-md-9">
                                         <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ $user->user_info->nic }}" required autocomplete="nic" autofocus>

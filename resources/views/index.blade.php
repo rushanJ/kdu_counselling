@@ -288,9 +288,18 @@
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
             <p class="mb-0">
-              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-              diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-              lorem sit clita duo justo magna dolore erat amet
+            Are you worrying about
+your academic,
+relationship, personal,
+financial
+or social life?
+            </p>
+            <p class="mb-0">
+            Stop worrying alone. No matter
+who you are or how you feel,
+we are here to listen to you
+with open ears and open
+hearts.
             </p>
           </div>
         </div>
@@ -310,7 +319,7 @@
                <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
                <div class="team-text bg-white p-4">
                   <h5>{{$user->f_name}} {{$user->l_name}}</h5>
-                 
+                  <h6>{{$user->nic}}</h6>
                  
                </div>
                </div>
