@@ -175,10 +175,7 @@
             <div class="facts-overlay">
               <h1 class="display-1">01</h1>
               <h4 class="text-white mb-3">Educational Counseling</h4>
-              <p class="text-white">
-                Aliqu diam amet diam et eos erat ipsum lorem stet lorem sit
-                clita duo justo erat amet
-              </p>
+             
               <a class="text-white small" href=""
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
