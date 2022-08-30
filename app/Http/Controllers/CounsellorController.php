@@ -106,25 +106,16 @@ class CounsellorController extends Controller
     }
     public function update($id,CreateUserRequest $data)
     {
-        // dd($data['nic']);  //  
+        
 
 
         try {
-            // $user= User::create([
-            //     'name' => $data['name'],
-            //     'email' => $data['email'],
-            //     'password' => Hash::make($data['password']),
-            // ]);
-    
-            // $user = User::find($user->id);
-            // $counsellor = new Counsellor;
-    
-    
+           
     
             $user = User::find($id);
-            // dd($user);
-            $counsellor = $user->user_info();
-    
+           
+            $counsellor = Counsellor::firstWhere('user_id',$user->id);
+            // dd($counsellor);
             $counsellor->f_name =  $data['f_name'] ;
             $counsellor->m_name =  $data['m_name'] ;
             $counsellor->l_name = $data['l_name'] ;
@@ -138,9 +129,9 @@ class CounsellorController extends Controller
             $counsellor->department = $data['department']  ;
             $counsellor->nic =  $data['nic']  ;
 
-            $counsellor->save($counsellor);
+            $counsellor->save();
             // $counsellor->save();    
-            dd($counsellor['nic']);  //  
+            // dd($counsellor['nic']);  //  
          
              // dd($counsellor['nic']);  // 
             // dd($user->user_info);

@@ -16,7 +16,7 @@
  <form class="form" action="" method="POST" id="registrationForm">
                   @csrf
       <div class="text-center">
-        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <img src="../../storage/{{ $user->user_info->image }}" class=" img-circle img-thumbnail" alt="avatar">
       </div></hr><br>
 
  
@@ -78,7 +78,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Middle name </h4></label>
@@ -93,7 +93,7 @@
                                     @enderror                              
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -128,7 +128,7 @@
                             </div>
                       </div>
 
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Faculty </h4></label>
@@ -143,9 +143,9 @@
                                     @enderror                              
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
 
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Department </h4></label>
@@ -160,7 +160,7 @@
                                     @enderror          
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
 
 
                            
@@ -249,7 +249,7 @@
                       <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Save') }}
                                 </button>
                             </div>
                         </div>

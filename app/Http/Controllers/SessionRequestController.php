@@ -33,7 +33,7 @@ class SessionRequestController extends Controller
             return view('admin/sessions/all',compact('session_requests'));
         }
         else {
-        $session_requests = \DB::select("SELECT `session__requests`.`id`,`session__requests`.`is_anonnimus`,CONCAT(`counsellors`.`f_name`,' ',`counsellors`.`l_name`) AS `student_name`,`users`.`name`AS `counsellor_name`, `session__requests`.`problem_type`,`session__requests`. `service_method`, `session__requests`.`remarks` FROM `session__requests`,`users`,`counsellors` WHERE `session__requests`.`student_id`=`counsellors`.`id` AND `session__requests`.`counseller_id`=`users`.`id`;");
+        $session_requests = \DB::select("SELECT `session__requests`.`id`,`session__requests`.`is_anonnimus`,CONCAT(`counsellors`.`f_name`,' ',`counsellors`.`l_name`) AS `student_name`,`users`.`name`AS `counsellor_name`, `session__requests`.`problem_type`,`session__requests`. `service_method`, `session__requests`.`remarks` FROM `session__requests`,`users`,`counsellors` WHERE `session__requests`.`student_id`=`counsellors`.`user_id` AND `session__requests`.`counseller_id`=`users`.`id`;");
         // dd($questions );
         return view('admin/sessions/all',compact('session_requests'));
         }

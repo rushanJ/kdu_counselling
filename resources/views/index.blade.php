@@ -303,35 +303,31 @@
             </p>
           </div>
         </div>
+
+        
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
         <div class="row g-4">
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="team-item position-relative">
-              <img class="img-fluid" src="img/team-1.jpg" alt="" />
-              <div class="team-text bg-white p-4">
-                <h5>Full Name</h5>
-                <span>Engineer</span>
-              </div>
+        @foreach ($users as $user)
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+               <div class="team-item position-relative">
+               <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
+               <div class="team-text bg-white p-4">
+                  <h5>{{$user->f_name}} {{$user->l_name}}</h5>
+                 
+                 
+               </div>
+               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="team-item position-relative">
-              <img class="img-fluid" src="img/team-2.jpg" alt="" />
-              <div class="team-text bg-white p-4">
-                <h5>Full Name</h5>
-                <span>Engineer</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-            <div class="team-item position-relative">
-              <img class="img-fluid" src="img/team-3.jpg" alt="" />
-              <div class="team-text bg-white p-4">
-                <h5>Full Name</h5>
-                <span>Engineer</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          
+          @endforeach
+          </div>  
+       
       </div>
     </div>
     <!-- Team End -->

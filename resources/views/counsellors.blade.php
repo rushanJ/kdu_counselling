@@ -28,9 +28,9 @@
                <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
                <div class="team-text bg-white p-4">
                   <h5>{{$user->f_name}} {{$user->l_name}}</h5>
-                  <h6>{{$user->gender}}</h6>
-                  <h6>{{$user->faculty}}</h6>                  
-                  <span>{{$user->department}}</span>
+                  <h6>{{$user->nic}}</h6>
+                  <!-- <h6>{{$user->faculty}}</h6>                  
+                  <span>{{$user->department}}</span> -->
                   <br>
                   <a href='/servicesFromCounsellor/{{$user->user_id}}' type="button" class="btn btn-light">Select</a>
                </div>

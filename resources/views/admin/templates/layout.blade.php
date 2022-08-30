@@ -19,21 +19,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="http://192.168.8.104:8000/assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="http://localhost:8000/assets/img/favicon.png">
   <title>
     Soft UI Dashboard by Creative Tim
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
-  <link href="http://192.168.8.104:8000/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="http://192.168.8.104:8000/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="http://localhost:8000/assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="http://localhost:8000/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="http://192.168.8.104:8000/assets/css/nucleo-svg.css" rel="stylesheet" />
+  <link href="http://localhost:8000/assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link id="pagestyle" href="http://192.168.8.104:8000/assets/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
+  <link id="pagestyle" href="http://localhost:8000/assets/css/soft-ui-dashboard.css?v=1.0.6" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -49,7 +49,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="http://192.168.8.104:8000/home">
+          <a class="nav-link active" href="http://localhost:8000/home">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>shop </title>
@@ -70,7 +70,7 @@
         </li>
         @if(session()->get('role') =='ADMIN')
         <li class="nav-item">
-          <a class="nav-link " href="http://192.168.8.104:8000/user">
+          <a class="nav-link " href="http://localhost:8000/user">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -86,12 +86,12 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">COUNSELLER</span>
+            <span class="nav-link-text ms-1">Counsellor</span>
           </a>
         </li>
         @endif
         <li class="nav-item">
-          <a class="nav-link " href="http://192.168.8.104:8000/student">
+          <a class="nav-link " href="http://localhost:8000/student">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -111,7 +111,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="http://192.168.8.104:8000/questions">
+          <a class="nav-link  " href="http://localhost:8000/questions">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>credit-card</title>
@@ -131,7 +131,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="http://192.168.8.104:8000/sessions">
+          <a class="nav-link  " href="http://localhost:8000/sessions">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>box-3d-50</title>

@@ -160,12 +160,12 @@
 
                                     <div class="form-check">
                                         <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="gender">Male 
+                                            <input type="radio" class="form-check-input" value="Male" name="gender">Male 
                                         </label>
                                         </div>
                                         <div class="form-check">
                                         <label class="form-check-label">
-                                            <input type="radio" class="form-check-input" name="gender">female 
+                                            <input type="radio" class="form-check-input"  value="Female" name="gender">Female 
                                         </label>
                                     </div>
                                     @error('gender')

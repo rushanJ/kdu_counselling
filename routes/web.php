@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Counsellor;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    $users = Counsellor::where(['type' => "COUNSELLER"])
+    ->get();  
+    return view('index',compact('users'));
 });
 
 // Route::get('logout', Auth::logout())->name('auth.logout');
