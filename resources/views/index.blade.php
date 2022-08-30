@@ -191,10 +191,7 @@
             <div class="facts-overlay">
               <h1 class="display-1">02</h1>
               <h4 class="text-white mb-3">Relationship Counseling</h4>
-              <p class="text-white">
-                Aliqu diam amet diam et eos erat ipsum lorem stet lorem sit
-                clita duo justo erat amet
-              </p>
+             
               <a class="text-white small" href=""
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
@@ -207,10 +204,7 @@
             <div class="facts-overlay">
               <h1 class="display-1">03</h1>
               <h4 class="text-white mb-3">Depression Counseling</h4>
-              <p class="text-white">
-                Aliqu diam amet diam et eos erat ipsum lorem stet lorem sit
-                clita duo justo erat amet
-              </p>
+              
               <a class="text-white small" href=""
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
@@ -223,10 +217,7 @@
             <div class="facts-overlay">
               <h1 class="display-1">04</h1>
               <h4 class="text-white mb-3">Anxiety Counseling</h4>
-              <p class="text-white">
-                Aliqu diam amet diam et eos erat ipsum lorem stet lorem sit
-                clita duo justo erat amet
-              </p>
+             
               <a class="text-white small" href=""
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
