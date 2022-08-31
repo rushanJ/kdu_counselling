@@ -120,6 +120,37 @@
                             </div>
                       </div>
                      @endif
+
+                     @if($session_request->date==Null)
+           
+        
+
+          @else
+
+          <div class="form-group">
+                 <div class="row">
+                     <div class="col-md-3">
+                         <label for="first_name"><h6>Date :</h6></label>
+                     </div>
+                     <div class="col-md-9">
+                         <label for="first_name">{{ $session_request->date }}</label>
+                         <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
+                     </div>
+                 </div>
+           </div>
+           <div class="form-group">
+                 <div class="row">
+                 <div class="col-md-3">
+                         <label for="first_name"><h6>Time </h6></label>
+                     </div>
+                     <div class="col-md-9">
+                         <label for="first_name">{{ $session_request->time }}</label>
+                         <!-- <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any."> -->
+                     </div>
+                    
+                 </div>
+           </div>
+          @endif
               <hr>
               <a href="http://localhost:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
                      <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
