@@ -105,26 +105,28 @@ class SessionRequestController extends Controller
     {
         //
         $userId=Auth::user()->id;
-        // dd($userId );
+        
         $user = Counsellor::where('user_id',Auth::user()->id)->get();;
-        if ( $user[0]->type=="COUNSELLER"){
+        // if ( $user[0]->type=="COUNSELLER"){
         $session_request = Session_Request::find($id);
         // dd($session_request);
         $session_request->counseller_id =$request['counsellor'];
         $session_request->problem_type =$request['problem_type'];
                         //
-        $session_request->save(); 
+        // $session_request->save(); 
 
-        }
-        else{
-            $session_request = Session_Request::find($id);
+        // // }
+        // // else{
+        //     $session_request = Session_Request::find($id);
             // dd($session_request);
             $session_request->date =$request['date'];
             $session_request->time =$request['time'];
                       //
             $session_request->save(); 
     
-        }
+        // }
+
+        // dd($request['counsellor']);
         return redirect()->back(); 
     }
 
