@@ -93,7 +93,8 @@
                             
 
                         </div>
-                   
+                        <input type="submit" class="form-control" value="Assign">
+                     </form>
 
                      @else
 
@@ -120,12 +121,13 @@
                                
                             </div>
                       </div>
+
                      @endif
 
 
                      
                      @if($session_request->date==Null)
-           
+                     <form class="form" action="" method="POST">
                       
                         @csrf
                         <div class="form-group">
