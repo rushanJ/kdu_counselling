@@ -29,15 +29,15 @@
     />
 
     <!-- Libraries Stylesheet -->
-    <link href="http://localhost:8000/lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="http://localhost:8000/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="http://critssl.com/kdu_counselling/public/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="http://critssl.com/kdu_counselling/public/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="http://localhost:8000/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://critssl.com/kdu_counselling/public/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="http://localhost:8000/css/style.css" rel="stylesheet" />
-    <link href="http://localhost:8000/css/custom.css" rel="stylesheet" />
+    <link href="http://critssl.com/kdu_counselling/public/css/style.css" rel="stylesheet" />
+    <link href="http://critssl.com/kdu_counselling/public/css/custom.css" rel="stylesheet" />
   </head>
 
   <style>
@@ -305,12 +305,12 @@ input[type="radio"]{
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="http://localhost:8000/lib/wow/wow.min.js"></script>
-    <script src="http://localhost:8000/lib/easing/easing.min.js"></script>
-    <script src="http://localhost:8000/lib/waypoints/waypoints.min.js"></script>
-    <script src="http://localhost:8000/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="http://critssl.com/kdu_counselling/public/lib/wow/wow.min.js"></script>
+    <script src="http://critssl.com/kdu_counselling/public/lib/easing/easing.min.js"></script>
+    <script src="http://critssl.com/kdu_counselling/public/lib/waypoints/waypoints.min.js"></script>
+    <script src="http://critssl.com/kdu_counselling/public/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="http://localhost:8000/js/main.js"></script>
+    <script src="http://critssl.com/kdu_counselling/public/js/main.js"></script>
   </body>
 </html>
