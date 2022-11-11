@@ -183,7 +183,7 @@
 
                      <p></p>
                      
-                     <a href="http://localhost:3000/chat.html?username={{ $session_request->counsellor_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
+                     <a href="http://ec2-54-248-70-255.ap-northeast-1.compute.amazonaws.com:3000/chat.html?username={{ $session_request->counsellor_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
                      <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
               <hr>
               
