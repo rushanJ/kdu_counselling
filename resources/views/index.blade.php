@@ -313,7 +313,7 @@ hearts.
         @foreach ($users as $user)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                <div class="team-item position-relative">
-               <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
+               <img class="img-fluid" style="width:99vh" src="../../storage/{{ $user->image }}" alt="" />
                <div class="team-text bg-white p-4">
                   <h5>{{$user->f_name}} {{$user->l_name}}</h5>
                   <h6>{{$user->nic}}</h6>
@@ -335,6 +335,8 @@ hearts.
 
 
 
-
+    <!-- <audio autoplay>
+  <source src="https://critssl.com/kdu_counselling/storage/app/public/please-calm-my-mind-125566.mp3" type="audio/wav" />
+</audio> -->
 
 @stop

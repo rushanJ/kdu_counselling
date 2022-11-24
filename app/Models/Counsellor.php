@@ -28,4 +28,5 @@ class Counsellor extends Model
     {
         return $this->belongsToMany(Role::class, 'role_user');
     }
+    
 }

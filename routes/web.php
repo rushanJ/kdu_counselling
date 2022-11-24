@@ -76,6 +76,15 @@ Route::post('/servicesFromCounsellor/create', [App\Http\Controllers\ServiceFromC
 Route::get('/mysessions', [App\Http\Controllers\SessionRequestController::class, 'index'])->name('question');
 Route::get('/mysessions/{id}', [App\Http\Controllers\SessionRequestController::class, 'show'])->name('user');
 
+
+
+
+
+
+Route::post('/addRate/{id}', [App\Http\Controllers\RateController::class, 'update'])->name('addRate');
+
+Route::get('/test', [App\Http\Controllers\RateController::class, 'index'])->name('test');
+
 Route::get('storage/images/{filename}', function ($filename)
 {
     // dd("asdfasdas");

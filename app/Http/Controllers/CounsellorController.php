@@ -32,7 +32,7 @@ class CounsellorController extends Controller
         $users = Counsellor::where(['type' => "COUNSELLER"])
         ->get();  
        
-        // dd($user);
+       
         if ($user[0]->type=='STUDENT') return view('/counsellors',compact('users'));
         else return view('admin/counsellor/all',compact('users'));
     }
@@ -46,13 +46,16 @@ class CounsellorController extends Controller
     public function view($id)
     {
         $user = User::find($id);
+       
         return view('admin/counsellor/view',compact('user'));
     }
 
     public function edit($id)
     {
         $user = User::find($id);
-        return view('admin/counsellor/edit',compact('user'));
+        $userInfo = Counsellor::where('user_id',$user->id)->first();;
+        // dd($userInfo);
+        return view('admin/counsellor/edit',compact('user','userInfo'));
     }
 
 
@@ -79,7 +82,7 @@ class CounsellorController extends Controller
             // dd($user);
             $counsellor = new Counsellor;
     
-            $counsellor->f_name =  $data['f_name'];
+            $counsellor->fAname =  $data['f_name'];
             $counsellor->m_name =  $data['m_name'];
             $counsellor->l_name = $data['l_name'];
             $counsellor->address =  $data['address'];
@@ -92,6 +95,7 @@ class CounsellorController extends Controller
             $counsellor->type =  "COUNSELLER";
             $counsellor->department = $data['department'];
             $counsellor->nic =  $data['nic'];
+            $counsellor->description =  $data['description'];
             $counsellor->image =  $path;
             $user->user_info()->save($counsellor);
             // dd($user->user_info);
@@ -128,6 +132,7 @@ class CounsellorController extends Controller
             $counsellor->type =  "COUNSELLER";
             $counsellor->department = $data['department']  ;
             $counsellor->nic =  $data['nic']  ;
+            $counsellor->description =  $data['description'];
 
             $counsellor->save();
             // $counsellor->save();    
@@ -147,6 +152,7 @@ class CounsellorController extends Controller
 
     public function delete($id)
     {
+     
         $user = User::find($id);
         $user->user_info()->delete();
         $user = User::find($id)->delete();

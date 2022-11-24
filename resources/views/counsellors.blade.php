@@ -21,21 +21,42 @@
           </div>
         </div>
 
-        <div class="row g-4">
+        <div class="row g-12">
         @foreach ($users as $user)
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-               <div class="team-item position-relative">
-               <img class="img-fluid" src="../../storage/{{ $user->image }}" alt="" />
-               <div class="team-text bg-white p-4">
-                  <h5>{{$user->f_name}} {{$user->l_name}}</h5>
-                  <h6>{{$user->nic}}</h6>
-                  <!-- <h6>{{$user->faculty}}</h6>                  
-                  <span>{{$user->department}}</span> -->
+            <div class="container-fluid card rounded  shadow-lg" style="margin-bottom: 50px;">
+      <div class="row"  >
+        <div class="col-sm-3 col-md-6 col-lg-4" style="margin: 50px;">
+          <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item position-relative">
+                <img class="img-fluid" src="../../storage/{{ $user->image }}" style="width: 300px;" alt="" />
+               
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-9 col-md-6 col-lg-6" style="margin: 50px;">
+        <h5>{{$user->f_name}} {{$user->l_name}}</h5>
+                    <h6>{{$user->nic}}</h6>
+                    <div>{{$user->description}}</div>
                   <br>
-                  <a href='/servicesFromCounsellor/{{$user->user_id}}' type="button" class="btn btn-light">Select</a>
-               </div>
-               </div>
-            </div>
+                    @php 
+                        if (!$user->no_of_responses==0){
+                          for ($x = 0; $x <=$user->response_total/ $user->no_of_responses; $x++) {
+                                  echo "<span class='fa fa-star checked'></span>";
+                                }
+                        }
+                      @endphp
+                    
+                    <!-- <h6>{{$user->faculty}}</h6>                  
+                    <span>{{$user->department}}</span> -->
+                   
+                    
+<br>
+<br>
+                    <a href='/servicesFromCounsellor/{{$user->user_id}}' type="button" class="btn btn-light">Select</a>
+        </div>
+      </div>
+    </div>
+            
           
           @endforeach
           

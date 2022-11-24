@@ -30,6 +30,7 @@ class CreateCounsellorTable extends Migration
             $table->string('phone');
             $table->string('type');
             $table->string('image');
+            $table->string('description');
             $table->timestamps();
         });
     }

@@ -45,9 +45,13 @@
                                
                             </div>
                       </div>
+
                       
                       
-                      @if($session_request->counseller_id==0)
+                      
+                     
+                     
+                        @if($session_request->counseller_id==0)
            
                       <form class="form" action="" method="POST">
                         @csrf
@@ -120,10 +124,12 @@
                             </div>
                       </div>
                      @endif
+                     
+
 
                      @if($session_request->date==Null)
            
-        
+                    
 
           @else
 
@@ -151,6 +157,81 @@
                  </div>
            </div>
           @endif
+          <label for="first_name"><h6>Rate </h6></label>
+          <form enctype ="multipart/form-data"  action="../addRate/{{$session_request->counseller_id }}" method="POST" id="registrationForm" >
+                         @csrf
+    
+                          
+                                 
+                                        
+                                       
+                         <input id="rate" type="hidden"  name="rate"  required autocomplete="rate" autofocus>
+
+                         <div class="star-wrapper">
+                            <a onclick="setRate(5)" class="fas fa-star s1" id="s1" ></a>
+                            <a onclick="setRate(4)" class="fas fa-star s2" id="s2"></a>
+                            <a onclick="setRate(3)" class="fas fa-star s3" id="s3"></a>
+                            <a onclick="setRate(2)" class="fas fa-star s4" id="s4"></a>
+                            <a onclick="setRate(1)" class="fas fa-star s5" id="s5"></a>
+                            </div>
+                            <script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
+
+                            <script>
+                                function setRate(value){
+                                    document.getElementById("rate").value=value
+                                    if (value==1) {
+                                        document.getElementById("s5").style.color = "red";
+                                    }
+                                    if (value==2) {
+                                        document.getElementById("s5").style.color = "red";
+                                        document.getElementById("s4").style.color = "red";
+                                    }
+                                    if (value==3) {
+                                        document.getElementById("s5").style.color = "red";
+                                        document.getElementById("s4").style.color = "red";
+                                        document.getElementById("s3").style.color = "red";
+                                    }
+                                    if (value==4) {
+                                        document.getElementById("s5").style.color = "red";
+                                        document.getElementById("s4").style.color = "red";
+                                        document.getElementById("s3").style.color = "red";
+                                        document.getElementById("s2").style.color = "red";
+                                    }
+                                    if (value==5) {
+                                        document.getElementById("s5").style.color = "red";
+                                        document.getElementById("s4").style.color = "red";
+                                        document.getElementById("s3").style.color = "red";
+                                        document.getElementById("s2").style.color = "red";
+                                        document.getElementById("s1").style.color = "red";
+                                    }
+                                }
+                            </script>
+                           
+     
+                                           
+                                    
+                            
+
+                         
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            {{ __('Submit Rating') }}
+                                        </button>
+                                    </div>
+                         
+                      
+                   
+                 
+              	        </form>
+
+
+                          
+
+
+
+
+
+
               <hr>
               <a href="http://ec2-54-248-70-255.ap-northeast-1.compute.amazonaws.com:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
                      <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
@@ -189,10 +270,11 @@
                   
 
                     </tr>
+                    
                     @endforeach
                       
           
-
+                    
               
                 
                

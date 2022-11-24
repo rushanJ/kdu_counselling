@@ -76,7 +76,7 @@
    </div>
    <div style="overflow:auto;">
      <div style="float:right;">
-       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+       <button type="button" id="prevBtn" onclick="musicPlay();nextPrev(-1)">Previous</button>
        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
      </div>
    </div>
@@ -166,6 +166,24 @@
  }
  </script>
  
+ <button type="button" id="myCheck" onmouseover="musicPlay()" onclick="musicPlay()">sdfsdfsdf</button>
+
+    <audio id="playAudio" controls autoplay>
+  <source src="http://critssl.com/kdu_counselling/storage/app/public/preview.mp3" type="audio/mpeg" />
+</audio>
+<script>
+  // document.addEventListener('click', musicPlay);
+  // musicPlay();
+  // document.getElementById("myCheck").click();
+  document.getElementById("myDIV").addEventListener("scroll", musicPlay);
+
+function musicPlay() {
+
+    document.getElementById('playAudio').play();
+    document.removeEventListener('click', musicPlay);
+}
+  </script>
+
 
 @stop
 
