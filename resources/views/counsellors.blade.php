@@ -28,7 +28,7 @@
         <div class="col-sm-3 col-md-6 col-lg-4" style="margin: 50px;">
           <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item position-relative">
-                <img class="img-fluid" src="../../storage/{{ $user->image }}" style="width: 300px;" alt="" />
+                <img class="img-fluid" src="http://critssl.com/kdu_counselling/storage/app/public/{{ $user->image }}" style="width: 300px;" alt="" />
                
                 </div>
               </div>

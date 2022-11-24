@@ -184,6 +184,23 @@ function fixStepIndicator(n) {
 
 @stop
 
+<audio id="playAudio"  autoplay>
+<source src="http://critssl.com/kdu_counselling/storage/app/public/please-calm-my-mind-125566.mp3" type="audio/mpeg" />
+</audio>
+<script>
+// document.addEventListener('click', musicPlay);
+// musicPlay();
+// document.getElementById("myCheck").click();
+document.getElementById("myDIV").addEventListener("scroll", musicPlay);
+
+function musicPlay() {
+
+document.getElementById('playAudio').play();
+document.removeEventListener('click', musicPlay);
+}
+</script>
+
+
 @section('scripts')
    <script src="{{ asset('js/partials.js') }}"></script>
 @endsection
