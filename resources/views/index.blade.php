@@ -176,7 +176,7 @@
               <h1 class="display-1">01</h1>
               <h4 class="text-white mb-3">Educational Counseling</h4>
              
-              <a class="text-white small" href=""
+              <a class="text-white small" href="educational.html"
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -189,7 +189,7 @@
               <h1 class="display-1">02</h1>
               <h4 class="text-white mb-3">Relationship Counseling</h4>
              
-              <a class="text-white small" href=""
+              <a class="text-white small" href="relationship.html"
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -202,7 +202,7 @@
               <h1 class="display-1">03</h1>
               <h4 class="text-white mb-3">Depression Counseling</h4>
               
-              <a class="text-white small" href=""
+              <a class="text-white small" href="depression.html"
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -215,7 +215,7 @@
               <h1 class="display-1">04</h1>
               <h4 class="text-white mb-3">Anxiety Counseling</h4>
              
-              <a class="text-white small" href=""
+              <a class="text-white small" href="anxiety.html"
                 >READ MORE<i class="fa fa-arrow-right ms-3"></i
               ></a>
             </div>
@@ -248,22 +248,11 @@
             >
               <img
                 class="position-absolute w-100 h-100"
-                src="img/feature.jpg"
+                src="img/fact-1.jpg"
                 alt=""
                 style="object-fit: cover"
               />
-              <div
-                class="position-absolute top-0 start-0 bg-white pe-3 pb-3"
-                style="width: 200px; height: 200px"
-              >
-                <div
-                  class="d-flex flex-column justify-content-center text-center bg-primary h-100 p-3"
-                >
-                  <h1 class="text-white">25</h1>
-                  <h2 class="text-white">Years</h2>
-                  <h5 class="text-white mb-0">Experience</h5>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
