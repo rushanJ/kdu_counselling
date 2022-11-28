@@ -196,6 +196,39 @@ input[type="radio"]{
 }
 
 
+#option-RELATIONSHIP:checked:checked ~ .option-RELATIONSHIP,
+#option-EDUCATIONAL:checked:checked ~ .option-EDUCATIONAL,
+#option-DEPRESSION:checked:checked ~ .option-DEPRESSION,
+#option-ANXIETY:checked:checked ~ .option-ANXIETY{
+  padding: 5px;
+  
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#option-RELATIONSHIP:checked:checked ~ .option-RELATIONSHIP .dot,
+#option-EDUCATIONAL:checked:checked ~ .option-EDUCATIONAL .dot,
+#option-DEPRESSION:checked:checked ~ .option-DEPRESSION .dot,
+#option-ANXIETY:checked:checked ~ .option-ANXIETY .dot{
+  background: #fff;
+}
+#option-RELATIONSHIP:checked:checked ~ .option-RELATIONSHIP .dot::before,
+#option-EDUCATIONAL:checked:checked ~ .option-EDUCATIONAL .dot::before,
+#option-DEPRESSION:checked:checked ~ .option-DEPRESSION .dot::before,
+#option-ANXIETY:checked:checked ~ .option-ANXIETY .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-RELATIONSHIP:checked:checked ~ .option-RELATIONSHIP span,
+#option-EDUCATIONAL:checked:checked ~ .option-EDUCATIONAL span,
+#option-DEPRESSION:checked:checked ~ .option-DEPRESSION span,
+#option-ANXIETY:checked:checked ~ .option-ANXIETY span{
+  color: #fff;
+}
+
 
 .img-optioin{
   width: 500px;

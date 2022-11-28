@@ -46,9 +46,9 @@
                 <td>{{ $user->gender }}</td>
                 <td>{{ $user->phone }}</td>
                 <td>   
-                     <a href='user/edit/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons">edit</span></a>
+                     <a href='student/edit/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons">edit</span></a>
                      <a href='student/view/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons">visibility</span></a>
-                     <a href='../../user/delete/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons"> delete </span></a>
+                     <a href='student/delete/{{ $user->user_id }}' type="button" class="btn btn-outline-primary"><span class="material-icons"> delete </span></a>
                 </td>
 
 

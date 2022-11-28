@@ -107,40 +107,40 @@ class StudentController extends Controller
 
 
 
-        try {
-            $user= User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
+        // try {
+        //     $user= User::create([
+        //         'name' => $data['name'],
+        //         'email' => $data['email'],
+        //         'password' => Hash::make($data['password']),
+        //     ]);
     
-            // $user = User::find($user->id);
-            // $student = new Counsellor;
+        //     // $user = User::find($user->id);
+        //     // $student = new Counsellor;
     
     
     
-            $user = User::find($user->id);
-            // dd($user);
-            $student = new Counsellor;
+        //     $user = User::find($user->id);
+        //     // dd($user);
+        //     $student = new Counsellor;
     
-            $student->f_name =  $data['f_name'];
-            $student->m_name =  $data['m_name'];
-            $student->l_name = $data['l_name'];
-            $student->address =  $data['address'];
-            $counsellor->dob =  $data['dob']||'';
-            $student->emp_no_student_no =  $data['emp_no_student_no'];
-            $student->faculty =  $data['faculty'];
-            $student->batch = $data['batch'];
-            $student->gender =  $data['gender'];
-            $student->phone =  $data['phone'];
-            $student->type =  "STUDENT";
-            $student->department = $data['department'];
-            $student->nic =  $data['nic'];
-            $user->user_info()->save($student);
-            // dd($user->user_info);
-          } catch (\Exception $e) {
-              return $e->getMessage();
-          }
+        //     $student->f_name =  $data['f_name'];
+        //     $student->m_name =  $data['m_name'];
+        //     $student->l_name = $data['l_name'];
+        //     $student->address =  $data['address'];
+        //     $counsellor->dob =  $data['dob']||'';
+        //     $student->emp_no_student_no =  $data['emp_no_student_no'];
+        //     $student->faculty =  $data['faculty'];
+        //     $student->batch = $data['batch'];
+        //     $student->gender =  $data['gender'];
+        //     $student->phone =  $data['phone'];
+        //     $student->type =  "STUDENT";
+        //     $student->department = $data['department'];
+        //     $student->nic =  $data['nic'];
+        //     $user->user_info()->save($student);
+        //     // dd($user->user_info);
+        //   } catch (\Exception $e) {
+        //       return $e->getMessage();
+        //   }
 
       
           return redirect('user');
@@ -166,10 +166,10 @@ class StudentController extends Controller
     
             $user = User::find($id);
             // dd($user);
-            $student = $user->user_info();
+            // $student = $user->user_info();
+            $student = Counsellor::firstWhere('user_id',$user->id);
     
             $student->f_name =  $data['f_name'];
-            $student->m_name =  $data['m_name'];
             $student->l_name = $data['l_name'];
             $student->address =  $data['address'];
             $student->emp_no_student_no =  $data['emp_no_student_no'];
@@ -181,9 +181,9 @@ class StudentController extends Controller
             $student->department = $data['department'];
             $student->nic =  $data['nic'];
 
-            $student->save($student);
-            // $student->save();    
-            dd($student['nic']);  //  
+            // $student->save($student);
+            $student->save();    
+            // dd($student['nic']);  //  
          
              // dd($student['nic']);  // 
             // dd($user->user_info);

@@ -214,6 +214,22 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
+                                    <label for="first_name"><h4>Description </h4></label>
+                                </div>
+                                <div class="col-md-9">
+                                    <textarea id="description"  class="form-control @error('description') is-invalid @enderror" name="description"  required autocomplete="description"></textarea>
+                                    @error('description')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                      </div>
+
+                      <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-3">
                                     <label for="first_name"><h4>Password </h4></label>
                                 </div>
                                 <div class="col-md-9">

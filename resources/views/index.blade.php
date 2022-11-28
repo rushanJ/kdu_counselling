@@ -269,7 +269,7 @@
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="border-start border-5 border-primary ps-4">
               <h6 class="text-body text-uppercase mb-2">Our Team</h6>
-              <h1 class="display-6 mb-0">Our Expert Counsellers</h1>
+              <h1 class="display-6 mb-0">Our Expert Counselors</h1>
             </div>
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">

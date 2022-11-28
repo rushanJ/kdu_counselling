@@ -5,9 +5,11 @@
     <div class="row justify-content-center d-flex justify-content-center h-100">
        
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
+                
+                
+                
                 <div class="card-body">
+                    <img src="img/logo2.png" style="width:280px; margin-left:5vh"/> 
                     <form method="POST" action="{{ route('login') }}">
                     @csrf
                                 <div class="card-body">

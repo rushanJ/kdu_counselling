@@ -45,7 +45,7 @@ Route::post('/student/create', [App\Http\Controllers\StudentController::class, '
 Route::post('/student/edit/{id}', [App\Http\Controllers\StudentController::class, 'update'])->name('create');
 
 
-Route::get('/user/delete/{id}', [App\Http\Controllers\StudentController::class, 'delete'])->name('delete');
+Route::get('/student/delete/{id}', [App\Http\Controllers\StudentController::class, 'delete'])->name('delete');
 
 
 

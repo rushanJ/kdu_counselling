@@ -32,7 +32,7 @@
                     <div class="form-group">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <label for="first_name"><h4>NIC </h4></label>
+                                        <label for="first_name"><h4>Rank </h4></label>
                                     </div>
                                     <div class="col-md-9">
                                         <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ $user->user_info->nic }}" required autocomplete="nic" autofocus>
@@ -78,22 +78,7 @@
                                 </div>
                             </div>
                       </div>
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Middle name </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="m_name" type="text" class="form-control @error('m_name') is-invalid @enderror" name="m_name" value="{{ $user->user_info->m_name }}" required autocomplete="m_name" autofocus>
-
-                                    @error('m_name')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror                              
-                                </div>
-                            </div>
-                      </div>
+                      
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
@@ -168,7 +153,7 @@
                       <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="first_name"><h4>Batch </h4></label>
+                                    <label for="first_name"><h4>Intake </h4></label>
                                 </div>
                                 <div class="col-md-9">
                                     <input id="batch" type="text" class="form-control @error('batch') is-invalid @enderror" name="batch" value="{{ $user->user_info->batch }}" required autocomplete="batch" autofocus>

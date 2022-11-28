@@ -270,7 +270,7 @@
                   <i
                     class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"
                   ></i>
-                  <h6 class="mb-0">25+ years of professional experience</h6>
+                  <h6 class="mb-0">24 Hours best service</h6>
                 </div>
                 <span
                   >Magna sea eos sit dolor, ipsum amet ipsum lorem diam</span

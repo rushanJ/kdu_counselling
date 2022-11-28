@@ -7,6 +7,43 @@
 <form id="regForm" method="post" action="services/create">
 @csrf
 
+  <div class="tab">
+      
+      <div class="row">
+          <input type="radio" name="type" value="RELATIONSHIP" id="option-RELATIONSHIP" checked>
+          <input type="radio"  name="type" value="EDUCATIONAL" id="option-EDUCATIONAL">
+          <input type="radio" name="type" value="DEPRESSION" id="option-DEPRESSION" >
+          <input type="radio"  name="type" value="ANXIETY" id="option-ANXIETY">
+
+          <label for="option-RELATIONSHIP" class="option option-RELATIONSHIP col-sm-3">
+              
+          <img style="width:250px" src="https://media.istockphoto.com/id/1280359257/vector/hands-holding-a-torn-photo-of-a-couple-in-love.jpg?s=612x612&w=0&k=20&c=jkDSIkqFxSbnFJwh7wOSv2txR-68ypmcrpIykqltiAU=" alt="" class="img-optioin">
+
+              <span style="padding-left:10vh">RELATIONSHIP</span>
+              </label>
+          
+          <label for="option-EDUCATIONAL" class="option option-EDUCATIONAL col-sm-3">
+          
+          <img style="width:250px" src="https://c8.alamy.com/comp/2HMCF32/cute-child-with-learning-problem-vector-illustration-cartoon-confused-girl-sitting-at-table-with-homework-young-student-in-doubt-thinking-about-answer-on-question-education-troubles-concept-2HMCF32.jpg" alt="" class="img-optioin">
+
+              <span style="padding-left:10vh">EDUCATIONAL</span>
+                  </label>
+
+          <label for="option-DEPRESSION" class="option option-DEPRESSION col-sm-3">
+              
+          <img style="width:250px"  src="https://static.vecteezy.com/system/resources/previews/003/597/520/original/depressed-woman-sitting-with-her-head-down-free-vector.jpg" alt="" class="img-optioin">
+  
+                <span style="padding-left:10vh">DEPRESSION</span>
+                </label>
+          <label for="option-ANXIETY" class="option option-ANXIETY col-sm-3">
+          <img style="width:250px" src="https://img.freepik.com/free-vector/anxiety-concept-illustration_114360-8074.jpg" class="img-optioin" alt="">
+
+              <span style="padding-left:10vh">ANXIETY</span>
+          </label>
+          
+      </div>
+
+    </div>
 
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
@@ -18,7 +55,7 @@
             
         <img src="https://png.pngtree.com/png-clipart/20220613/original/pngtree-unknown-user-question-mark-about-png-image_7997211.png" alt="" class="img-optioin">
 
-            <span style="padding-left:25vh">ANNONIMOUS</span>
+            <span style="padding-left:25vh">ANNONYMOUS</span>
             </label>
         <label for="option-2" class="option option-2 col-sm-6">
         <img src="https://thumbs.dreamstime.com/b/conversation-two-person-conversation-two-person-concept-meeting-woman-man-chat-online-real-communication-160609745.jpg" class="img-optioin" alt="">
@@ -71,7 +108,7 @@
 
   </div>
   <div class="tab">
-  <input type="submit" value="update">
+  <input type="submit" style=" background-color: white;  color: black;  border: 2px solid #4CAF50;" value="Submit Your answers">
   </div>
   <div style="overflow:auto;">
     <div style="float:right;">
@@ -81,6 +118,7 @@
   </div>
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
+  <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>
     <span class="step"></span>

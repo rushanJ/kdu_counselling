@@ -36,7 +36,7 @@
         <div class="col-sm-9 col-md-6 col-lg-6" style="margin: 50px;">
         <h5>{{$user->f_name}} {{$user->l_name}}</h5>
                     <h6>{{$user->nic}}</h6>
-                    <div>{{$user->description}}</div>
+                    <div style="white-space: pre-wrap;">{{$user->description}}</div>
                   <br>
                     @php 
                         if (!$user->no_of_responses==0){

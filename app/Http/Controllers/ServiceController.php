@@ -50,7 +50,7 @@ class ServiceController extends Controller
                 'student_id' =>Auth::user()->id,
                 'is_anonnimus' => 1,
                 'counseller_id' => 0,
-                'problem_type' => '',
+                'problem_type' =>  $request['type'],
               
                 'service_method' => $request['service_method'],
                 'remarks' => $request['remarks'],
@@ -59,7 +59,7 @@ class ServiceController extends Controller
             $session_request= Session_Request::create([
                 'student_id' =>  Auth::user()->id,
                 'counseller_id' => 0,
-                'problem_type' => '',
+                'problem_type' =>  $request['type'],
                 'is_anonnimus' => 0,
                 'service_method' => $request['service_method'],
                 'remarks' => $request['remarks'],

@@ -82,7 +82,7 @@ class CounsellorController extends Controller
             // dd($user);
             $counsellor = new Counsellor;
     
-            $counsellor->fAname =  $data['f_name'];
+            $counsellor->f_name =  $data['f_name'];
             $counsellor->m_name =  $data['m_name'];
             $counsellor->l_name = $data['l_name'];
             $counsellor->address =  $data['address'];
@@ -152,6 +152,7 @@ class CounsellorController extends Controller
 
     public function delete($id)
     {
+        // dd("dfsdf");
      
         $user = User::find($id);
         $user->user_info()->delete();
@@ -162,6 +163,7 @@ class CounsellorController extends Controller
        
         // dd($user);
         // return redirect('user');
+        return back();
         return view('admin/counsellor/all',compact('users'));
     }
     
