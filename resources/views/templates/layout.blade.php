@@ -290,7 +290,7 @@ input[type="radio"]{
     @yield('content')
 
 <!-- <audio id="playAudio"  autoplay>
-<source src="http://critssl.com/kdu_counselling/storage/app/public/please-calm-my-mind-125566.mp3" type="audio/mpeg" />
+<source src="http://kducounselling.online/kdu_counselling/storage/app/public/please-calm-my-mind-125566.mp3" type="audio/mpeg" />
 </audio>
 <script>
 // document.addEventListener('click', musicPlay);

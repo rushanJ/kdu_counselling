@@ -207,7 +207,7 @@
  <button type="button" id="myCheck" onmouseover="musicPlay()" onclick="musicPlay()">sdfsdfsdf</button>
 
     <audio id="playAudio" controls autoplay>
-  <source src="http://critssl.com/kdu_counselling/storage/app/public/preview.mp3" type="audio/mpeg" />
+  <source src="http://kducounselling.online/kdu_counselling/storage/app/public/preview.mp3" type="audio/mpeg" />
 </audio>
 <script>
   // document.addEventListener('click', musicPlay);
