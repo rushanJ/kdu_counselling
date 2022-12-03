@@ -157,6 +157,24 @@
                  </div>
            </div>
           @endif
+          
+
+                          
+
+
+
+
+
+
+              <hr>
+              <a href="http://ec2-54-248-70-255.ap-northeast-1.compute.amazonaws.com:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}&color=green" type="button" class="btn btn-success"> Text Chat</a>
+                     <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
+
+             </div>
+           
+            
+             
+          </div>
           <label for="first_name"><h6>Rate </h6></label>
           <form enctype ="multipart/form-data"  action="../addRate/{{$session_request->counseller_id }}" method="POST" id="registrationForm" >
                          @csrf
@@ -173,8 +191,8 @@
                             <a onclick="setRate(3)" class="fas fa-star s3" id="s3"></a>
                             <a onclick="setRate(2)" class="fas fa-star s4" id="s4"></a>
                             <a onclick="setRate(1)" class="fas fa-star s5" id="s5"></a>
-                            </div>
-                            <script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
+                         </div>
+                        <script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
 
                             <script>
                                 function setRate(value){
@@ -225,6 +243,11 @@
               	        </form>
 
 
+      
+          
+        </div><!--/col-3-->
+
+        
                           
 
 
@@ -232,17 +255,6 @@
 
 
 
-              <hr>
-              <a href="http://ec2-54-248-70-255.ap-northeast-1.compute.amazonaws.com:3000/chat.html?username={{ $session_request->student_name }}&room={{ $session_request->id }}" type="button" class="btn btn-success"> Text Chat</a>
-                     <a href="https://meet.jit.si/KDU{{ $session_request->id }}"  type="button" class="btn btn-warning">Video Chat</a>
-
-             </div>
-           
-            
-          </div>
-      
-          
-        </div><!--/col-3-->
     	<div class="col-md-8">
           <div class="tab-content">
           <div class="form-group">

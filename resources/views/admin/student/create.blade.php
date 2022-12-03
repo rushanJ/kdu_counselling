@@ -34,8 +34,12 @@
                                         <label for="first_name"><h4>Rank </h4></label>
                                     </div>
                                     <div class="col-md-9">
-                                        <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ old('nic') }}" required autocomplete="nic" autofocus>
-
+                                        <!-- <input id="nic" type="text" class="form-control @error('nic') is-invalid @enderror" name="nic" value="{{ old('nic') }}" required autocomplete="nic" autofocus> -->
+                                        <select class="form-control" name="nic"  id="exampleFormControlSelect1">
+                                            <option value="Officer Cadet">Officer Cadet</option>
+                                            <option value="Day scholar">Day scholar</option>
+                                            
+                                        </select>
                                         @error('nic')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -103,8 +107,20 @@
                                     <label for="first_name"><h4>Faculty </h4></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input id="faculty" type="text" class="form-control @error('faculty') is-invalid @enderror" name="faculty" value="{{ old('faculty') }}" required autocomplete="faculty" autofocus>
-
+                                    <!-- <input id="faculty" type="text" class="form-control @error('faculty') is-invalid @enderror" name="faculty" value="{{ old('faculty') }}" required autocomplete="faculty" autofocus> -->
+                                   
+                                    <select class="form-control" name="faculty"  id="faculty">
+                                            <option value="FDSS">FDSS</option>
+                                            <option value="FOM">FOM</option>
+                                            <option value="FOE">FOE</option>
+                                            <option value="FOL">FOL</option>
+                                            <option value="FMSH">FMSH</option>
+                                            <option value="FASH">FASH</option>
+                                            <option value="FBESS">FBESS</option>
+                                            <option value="FOC">FOC</option>
+                                            <option value="FOT">FOT</option>
+                                            <option value="FOCJ">FOCJ</option>
+                                    </select>
                                     @error('faculty')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -157,8 +173,17 @@
                                     <label for="first_name"><h4>Gender </h4></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input id="gender" type="text" class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender" autofocus>
-
+                                    
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" value="Male" name="gender">Male 
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input"  value="Female" name="gender">Female 
+                                        </label>
+                                    </div>
                                     @error('gender')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

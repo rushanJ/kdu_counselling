@@ -233,11 +233,11 @@
             <div class="border-start border-5 border-primary ps-4 mb-5">
               <h6 class="text-body text-uppercase mb-2">Why Choose Us!</h6>
               <h1 class="display-6 mb-0">
-              What is online counselling exactly?
+              What is online counseling exactly?
               </h1>
             </div>
             <p class="mb-5">
-            It's the same as face to face counselling except you have your online counselling session from the privacy of your own home. We'll securely connect you to your counsellor or psychologist over an encrypted, face to face, video consultation.
+            It's the same as face to face counseling except you have your online counseling session from the privacy of your own home. We'll securely connect you to your counsellor or psychologist over an encrypted, face to face, video consultation.
             </p>
           
           </div>

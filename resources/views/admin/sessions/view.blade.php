@@ -21,7 +21,12 @@
                                     <label for="first_name"><h6>Student :</h6></label>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="first_name"> {{ $session_request->student_name }}</label>
+                                @if (!$session_request->is_anonnimus)        
+                                        <label for="first_name"> {{   $session_request->student_name }}</label>  
+                                @else
+                                        <label for="first_name"> Anonymous Student</label>
+                                @endif
+                                    
                                 </div>
                             </div>
                       </div>

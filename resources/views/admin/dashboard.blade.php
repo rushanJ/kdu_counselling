@@ -102,7 +102,7 @@
                   <img src="https://quickchart.io/chart?c={
                             type: 'bar',
                             data: {
-                                labels: ['-7 Days', '-14 Days', -'21 Days', '-28 Days'],
+                                labels: ['7 Days', '14 Days', '21 Days', '28 Days'],
                                 datasets: [
                                 {
                                     type: 'line',

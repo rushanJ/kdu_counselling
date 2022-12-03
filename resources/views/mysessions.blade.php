@@ -30,7 +30,7 @@
                 
                     <td>{{ $session_request->id }}</td>
                     @if($session_request->is_anonnimus  =='1')
-                        <td>Annonimus</td>
+                        <td>Anonymous</td>
                     @else
                         <td>Open</td>
                     @endif

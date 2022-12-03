@@ -32,7 +32,7 @@
                     <td>@if(! $session_request->is_anonnimus )         
                             {{ $session_request->student_name }}    
                     @else
-                        Anonnimus Student
+                        Anonymous Student
                     @endif
 </td>
                     <td>{{ $session_request->counsellor_name }}</td>

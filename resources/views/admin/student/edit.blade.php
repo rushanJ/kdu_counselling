@@ -96,7 +96,7 @@
                             </div>
                       </div>
                       
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Address </h4></label>
@@ -111,7 +111,7 @@
                                     @enderror
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
 
                       <div class="form-group">
                             <div class="row">
@@ -150,7 +150,7 @@
 
                            
 
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="first_name"><h4>Intake </h4></label>
@@ -165,7 +165,7 @@
                                     @enderror                 
                                 </div>
                             </div>
-                      </div>
+                      </div> -->
 
                       <div class="form-group">
                             <div class="row">
@@ -218,39 +218,14 @@
                             </div>
                       </div>
 
-                      <!-- <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Password </h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                            </div>
-                      </div>
-                      <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label for="first_name"><h4>Confirm Password</h4></label>
-                                </div>
-                                <div class="col-md-9">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                </div>
-                            </div>
-                      </div> -->
+                   
                       
                    
           
                       <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Save Changes') }}
                                 </button>
                             </div>
                         </div>
